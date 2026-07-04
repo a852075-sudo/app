@@ -630,7 +630,7 @@ function buildContrastSummaryRows(year, month) {
 function buildSyringeMetrics(year, month) {
   const targetRooms = ["rct", "ct3", "ct1"];
   const values = Object.fromEntries(targetRooms.map((roomId) => {
-    const entries = filterEntriesByAliases(entriesFor(roomId, year, month), ["針筒", "syringe", "高壓"]);
+    const entries = filterEntriesByAliases(entriesFor(roomId, year, month), ["注射器"]);
     return [roomId, sumEntries(entries, "usedQty")];
   }));
   return {
