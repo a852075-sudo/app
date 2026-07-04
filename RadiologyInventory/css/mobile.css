@@ -1,0 +1,171 @@
+@media (min-width: 680px) {
+  body:not([data-view-mode="mobile"]) .icon-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 920px) {
+  body:not([data-view-mode="mobile"]) .icon-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .top-app-bar {
+    grid-template-columns: auto 1fr auto auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .title-block h1 {
+    font-size: 15px;
+  }
+
+  .title-block p {
+    font-size: 11px;
+  }
+
+  .hero-panel {
+    display: block;
+  }
+
+  .view-mode-panel {
+    display: grid;
+  }
+
+  .segmented-control {
+    width: 100%;
+  }
+
+  .status-pill {
+    margin-top: 12px;
+  }
+
+  .app-card {
+    min-height: 120px;
+    padding: 14px;
+  }
+
+  .card-icon {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 12px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-group-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .span-2 {
+    grid-column: auto;
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .syringe-card-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .syringe-stat-card {
+    min-height: 92px;
+  }
+
+  .settings-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 8mm;
+  }
+
+  .top-app-bar,
+  .install-fab,
+  .view-mode-panel,
+  .table-toolbar .tonal-btn,
+  .dialog-actions {
+    display: none !important;
+  }
+
+  html,
+  body,
+  .view-root {
+    background: #fff;
+    color: #000;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .month-card,
+  .alert-card,
+  .table-card,
+  .summary-card {
+    box-shadow: none;
+  }
+
+  .table-card,
+  .syringe-panel {
+    page-break-inside: avoid;
+    overflow: visible !important;
+  }
+
+  .table-wrap {
+    overflow: visible !important;
+  }
+
+  table,
+  .reference-panel table,
+  .inventory-summary-table {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed !important;
+  }
+
+  th,
+  td,
+  .inventory-summary-table th,
+  .inventory-summary-table td {
+    width: auto !important;
+    padding: 4px 3px !important;
+    font-size: 8.5px !important;
+    line-height: 1.2 !important;
+    white-space: normal !important;
+    word-break: break-word;
+  }
+
+  th[colspan] {
+    font-size: 9px !important;
+  }
+
+  .inline-number {
+    width: 100% !important;
+    font-size: 8.5px !important;
+  }
+
+  .syringe-card-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 8px !important;
+    padding: 8px !important;
+  }
+
+  .syringe-stat-card {
+    min-height: 70px !important;
+    padding: 10px !important;
+  }
+
+  .syringe-stat-card strong {
+    font-size: 20px !important;
+  }
+}
